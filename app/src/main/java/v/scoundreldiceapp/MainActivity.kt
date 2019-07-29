@@ -2,11 +2,13 @@ package v.scoundreldiceapp
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     var currentRating : Int? = null
     var currentPosition: String? = null
     var currentEffect: String? = null
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -128,7 +133,8 @@ class MainActivity : AppCompatActivity() {
             arrayOfResults.add(dieResult)
 
         }
-
+        val  mp = MediaPlayer.create (this, R.raw.dicesound)
+        mp.start()
         // get highest roll
         var highestResult = arrayOfResults.max()
         debugText.setText("number of dice: $rating \nResults: "+arrayOfResults+" \nGiven position: $position. \nGiven effect: $effect \nHighest result is : $highestResult ")
@@ -145,6 +151,8 @@ class MainActivity : AppCompatActivity() {
                 debugText.setText("Number of dice: $rating. \nResults: "+arrayOfResults+" \nGiven position: $position \nGiven effect: $effect\n" +
                         "Highest result is : $highestResult \nMore than $criticalChecker x 6's! Critical!")
                 Log.i("CritChecker","More than "+criticalChecker+" 6's! Critical!")
+                val  mp = MediaPlayer.create (this, R.raw.critical)
+                mp.start()
             }
 
         }
@@ -153,9 +161,19 @@ class MainActivity : AppCompatActivity() {
                     "Highest result is : $highestResult \nHighest: $highestResult ")
             Log.i("HighestResult", "Highest: "+ highestResult)
         }
+
+
     }
 
+    fun soundButtonKnife(view: View){
+        val knifesound = MediaPlayer.create(this, R.raw.knifesound)
+        knifesound.start()
+    }
 
+    fun soundButtonGunShot(view: View){
+        val gunsound: MediaPlayer = MediaPlayer.create(this, R.raw.gunshot)
+         gunsound.start()
+    }
 
 
 
