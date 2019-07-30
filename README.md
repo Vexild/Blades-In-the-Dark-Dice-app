@@ -1,7 +1,7 @@
-### Blades-In-the-Dark-Dice-app
+# Blades-In-the-Dark-Dice-app
 Dice roller for Blades in the Dark RPG
 
-#Features:
+## Features:
 - User can roll dice pool of his/her/their action rating
 - Select position given by Game Master (GM)
 - Select target effect discussed between players and GM
@@ -13,7 +13,7 @@ In case of critical success, "HIS NAME IS JOHN CENA!"
 For RPG audio elements app has sound buttons. For starters there're only two of them (pistol and dagger)
 
 
-#TODO features
+# TODO features
 - collect all rolls to local database 
 - Histograph of rolls
 - setting page for volume
