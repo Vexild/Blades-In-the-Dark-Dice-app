@@ -18,5 +18,13 @@
         <item>"Standard"</item>
         <item>"Great"</item>
     </string-array>
-
+    <string name="settings">Settings</string>
+    <string name="info">Info</string>
+    <string name="information">This app is an unofficial tool for a roleplaying game called Blades in the Dark.\nApplication is created as part of a mobile programming course orgainzed by Opiframe Oy. \n\nContact me: vili.ahonen@hotmail.com \n\n</string>
+    <string name="copyright">Copyright of Blades in the Dark belongs to John Harper.</string>
+    <string name="history">History</string>
+    <string name="mutecheckbox">Mute all sounds</string>
+    <string name="saveSettings">Save</string>
+    <string name="history_result">Total roll: </string>
+    <string name="history_highest">Highest: </string>
 </resources>

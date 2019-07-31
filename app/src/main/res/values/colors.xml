@@ -6,6 +6,7 @@
     <color name="colorDark">#2B2B2B</color>
     <color name="colorGrey">#4B4B57</color>
     <color name="colorLightGrey">#838383</color>
+    <color name="colorLightGrey2">#C0C0C0</color>
     <color name="colorBlood">#9C0606</color>
 
     colorPrimary
