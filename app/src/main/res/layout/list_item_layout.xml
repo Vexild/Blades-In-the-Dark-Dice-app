@@ -6,135 +6,107 @@
               android:orientation="horizontal"
               android:background="@drawable/ligh_background">
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:divider="@color/colorPrimary"
-            android:dividerHeight="5dip">
+            android:divider="@color/colorPrimary" android:paddingRight="10dp">
         <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center" android:paddingTop="5dp" android:paddingLeft="2dp" android:paddingRight="2dp">
             <ImageView
                     android:id="@+id/icon"
-                    android:layout_width="61dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="50dp"
+                    android:layout_height="47dp"
                     app:srcCompat="@drawable/dice" android:cropToPadding="false" android:adjustViewBounds="false"
                     android:scrollbarAlwaysDrawHorizontalTrack="false"
                     android:scrollbarAlwaysDrawVerticalTrack="false"/>
 
             <LinearLayout
-                    android:layout_width="145dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:text="1.1.2019" android:id="@+id/history_date"/>
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:text="Prowl" android:id="@+id/history_action"/>
-
-            </LinearLayout>
-            <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:orientation="vertical">
+
                 <TextView
-                        android:text="Risky"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:id="@+id/history_position" android:textSize="24sp"/>
+                        android:text="Prowl" android:id="@+id/history_action" android:textAlignment="center"
+                        android:textSize="21dp"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:text="1.1.2019" android:id="@+id/history_date" android:textAlignment="center"
+                        android:textSize="10dp"/>
+
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:paddingRight="10dp">
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" android:layout_marginBottom="8dp" android:paddingTop="5dp"
-                android:paddingLeft="2dp" android:paddingRight="2dp">
-            <LinearLayout
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="@string/history_result" android:id="@+id/history_hardtext1"
+                    android:textSize="14dp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="[6, 6, 6, 6, 6, 6]" android:id="@+id/history_roll" android:textSize="14dp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp" android:textStyle="bold" android:id="@+id/history_hardtext2"
+                    android:text="@string/history_highest"/>
+            <TextView
+                    android:id="@+id/history_highest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="221dp"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <TextView
+                    android:text="Risky Standard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:id="@+id/history_position_effect" android:textSize="18sp" android:paddingTop="5dp"
+                    android:maxLines="2" android:textAlignment="center"/>
+            <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:text="@string/history_result" android:id="@+id/history_hardtext1"/>
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="16sp" android:textStyle="bold" android:id="@+id/history_hardtext2"
-                        android:text="@string/history_highest"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:text="1, 2, 5 ,5" android:id="@+id/history_roll"/>
-
-                <TextView
-                        android:id="@+id/history_highest"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textSize="16sp"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:text="Partial Success" android:id="@+id/history_outcome"/>
-
-            </LinearLayout>
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="Partial Success" android:id="@+id/history_outcome" android:textSize="24sp"
+                    android:textAlignment="center" android:singleLine="false"
+                    android:maxLines="2"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
