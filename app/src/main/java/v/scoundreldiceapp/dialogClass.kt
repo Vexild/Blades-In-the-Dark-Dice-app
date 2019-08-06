@@ -14,28 +14,17 @@ class dialogClass(context: Context) : Dialog(context) {
         setContentView(id)
     }
 
-
-
+    // Mute settings
     fun onCreateSettings(){
-
         var result: String = getMute()
         Log.i("OnCreate", "Mute setting RESULT is: " + result)
-        if(result == "1") {
-            this.muteCheckBox.isChecked = true
-        }
-        else{
-            this.muteCheckBox.isChecked = false
-        }
+        this.muteCheckBox.isChecked = result == "1"
     }
 
+    // Getting the mute boolean from settings table
     fun getMute(): String {
         val muteSetting = myDb.getAllSettings()
         muteSetting!!.moveToFirst()
-        //Log.i("OnCreate", "How many columns Settings has " + muteSetting.columnCount+" mute is"+muteSetting.getString(1))
-
         return muteSetting.getString(1)
     }
-
-
-
 }

@@ -9,7 +9,7 @@ import android.widget.TextView
 
 
 class MyListAdapter(private val context: Activity, private val data: ArrayList<Roll>) //private val highestRoll: Int, private val action: String, private val position : String, private val effect : String, private val outcome : String, private val date : String)
-    : BaseAdapter() { //<String>(context, R.layout.list_item_layout) {
+    : BaseAdapter() {
 
     private class ViewHolder(row: View?) {
         var history_date: TextView? = null
@@ -46,14 +46,14 @@ class MyListAdapter(private val context: Activity, private val data: ArrayList<R
             viewHolder = view.tag as ViewHolder
         }
 
-        var userDto = data[position]
-        viewHolder.history_date?.text = userDto.date
-        viewHolder.history_action?.text = userDto.action
-        viewHolder.history_positionEffect?.text = (userDto.position+" "+userDto.effect)
-        viewHolder.history_totalRoll?.text = userDto.roll_result
-        Log.i("DEBUG APADTER","User Roll: "+ userDto.roll.toString())
-        viewHolder.history_highest?.text = userDto.highestroll.toString()
-        viewHolder.history_outcome?.text = userDto.outcome
+        var userData = data[position]
+        viewHolder.history_date?.text = userData.date
+        viewHolder.history_action?.text = userData.action
+        viewHolder.history_positionEffect?.text = (userData.position+" "+userData.effect)
+        viewHolder.history_totalRoll?.text = userData.roll_result
+        Log.i("DEBUG APADTER","User Roll: "+ userData.roll.toString())
+        viewHolder.history_highest?.text = userData.highestroll.toString()
+        viewHolder.history_outcome?.text = userData.outcome
 
         return view as View
     }

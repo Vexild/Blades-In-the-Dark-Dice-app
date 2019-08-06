@@ -30,7 +30,6 @@ class databaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): 
         db.execSQL("CREATE TABLE IF NOT EXISTS rolls (ID INTEGER PRIMARY KEY AUTOINCREMENT, dice_number INT, dice_result TEXT,  highest_result INT, critical BOOLEAN, action_name TEXT, position TEXT, effect TEXT, date TEXT, outcome TEXT)")
         db.execSQL("CREATE TABLE IF NOT EXISTS settings (ID INTEGER PRIMARY KEY AUTOINCREMENT, mute INT)")
         Log.i("DatabaseHelper", "DB Created")
-        //Log.i("DatabaseHelper", getProfile().toString())
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -54,7 +53,6 @@ class databaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): 
         val db = this.writableDatabase
         Log.i("Set Mute", "Settings: "+settings+". And settings.ismuted: "+settings.isMuted)
         var muteSetting = settings.isMuted
-
         Log.i("Set Mute", "Mutesetting = "+muteSetting)
         return db.execSQL("UPDATE $SETTING_TABLE SET $MUTE = $muteSetting")
     }
@@ -74,7 +72,6 @@ class databaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): 
     }
     fun insertRollToDb(roll: PlayerRoll){
         val db = this.writableDatabase
-
         var rollValues = ContentValues()
         rollValues.put(DICE_NUMBER, roll.dice_number)
         rollValues.put(DICE_RESULT, roll.dice_result)
@@ -106,8 +103,6 @@ class databaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?): 
 
     fun deleteRolls() {
         val db = this.writableDatabase
-        //return db.delete("$ROLLS_TABLE",null,null)
-        //return db.execSQL("DROP TABLE IF EXISTS $ROLLS_TABLE")
         return db.execSQL("DELETE FROM $ROLLS_TABLE")
     }
     fun getSettings(): Cursor? {

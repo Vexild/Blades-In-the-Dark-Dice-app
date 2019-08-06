@@ -94,17 +94,17 @@
                 android:orientation="vertical">
             <TextView
                     android:text="Risky Standard"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:id="@+id/history_position_effect" android:textSize="18sp" android:paddingTop="5dp"
+                    android:id="@+id/history_position_effect" android:textSize="15sp" android:paddingTop="5dp"
                     android:maxLines="2" android:textAlignment="center"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:text="Partial Success" android:id="@+id/history_outcome" android:textSize="24sp"
+                    android:text="Partial Success" android:id="@+id/history_outcome" android:textSize="21sp"
                     android:textAlignment="center" android:singleLine="false"
                     android:maxLines="2"/>
         </LinearLayout>
