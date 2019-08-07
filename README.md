@@ -16,6 +16,6 @@ In case if user wants to clear all data, a proper function is foun from settings
 
 For RPG audio elements app has sound buttons. For starters there're only two of them (pistol and dagger)
 
-## Why dice roller? Isn't there enough of them?
+## Why dice roller? Are there not enough of them?
 
 I'm a pen-and-paper roleplaying person and I like tossing dice. Combining hobbies and course diploma work sounds good to me.
