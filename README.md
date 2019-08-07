@@ -8,7 +8,7 @@ Dice roller for Blades in the Dark RPG
 
 App rolls with simple radomization function and gives players the collective result. Highest result is noted and sets the out come of the roll
 
-User is asked for an Action, Action rating, Position and Effect. Result is displayd on the main screen and outcome of the roll is presented. This data is saved to local database. 
+User is asked for an Action, Action rating, Position and Effect through dialogs. Selections are saved and result is displayd on the main screen and outcome of the roll is presented. This data is saved to local database. 
 
 User can see all previous rolls from history dialog. Dialog presents a listview that contains all rolls found in rolls table.
 
